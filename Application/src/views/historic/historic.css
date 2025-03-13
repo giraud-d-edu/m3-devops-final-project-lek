@@ -1,0 +1,55 @@
+/* ------------------ Responsive ------------------*/
+
+@media screen and (min-width: 1401px) {
+  .container-leaderboard-page .container-historic-content {
+    min-height: calc(100vh - (76px + 2rem));
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .container-leaderboard-page .container-historic-content {
+    min-height: calc(100vh - (48px + 2rem));
+  }
+}
+
+/* ------------------ Containers ------------------*/
+
+.container-historic-header {
+  background-color: var(--background-nav);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(120px, 1fr));
+  grid-gap: 50px;
+  font-size: 12px;
+}
+
+/* ------------------ Others ------------------*/
+
+.container-leaderboard-page .container-historic-content {
+  background-color: var(--background-sign);
+  overflow-x: auto;
+  width: calc(100vw - 240px);
+}
+
+.container-historic-content::-webkit-scrollbar {
+  width: 12px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.container-historic-content::-webkit-scrollbar-track {
+  background: transparent;
+  cursor: pointer;
+}
+
+.container-historic-content::-webkit-scrollbar-thumb {
+  background: var(--background-nav);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.container-historic-content::-webkit-scrollbar-thumb:hover {
+  background: var(--background-color);
+  cursor: pointer;
+}

@@ -1,0 +1,53 @@
+/* ------------------ Containers ------------------*/
+
+.container-friend {
+  padding: 0.5rem;
+  background-color: var(--background-friend);
+  border-radius: 10px;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-friend .container-options {
+  gap: 0.2rem;
+}
+
+.container-friend .container-infos {
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ------------------ Images ------------------*/
+
+.container-options img {
+  width: 1rem;
+  object-fit: contain;
+  transition: 0.5s ease;
+}
+
+.container-options img:hover {
+  transform: scale(0.8);
+  cursor: pointer;
+}
+
+.container-options img:not(:hover) {
+  transform: scale(1);
+}
+
+.container-friend .profile-picture {
+  width: 2.3rem;
+  object-fit: contain;
+}
+
+/* ------------------ Texts ------------------*/
+
+.container-friend p {
+  white-space: nowrap;
+  width: 100%;
+  max-width: 100px;
+  overflow: hidden;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 14px;
+}

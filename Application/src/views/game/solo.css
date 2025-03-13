@@ -1,0 +1,52 @@
+/* ------------------ Containers ------------------*/
+
+.container-game {
+  align-items: center;
+  background-color: var(--background-game);
+  min-height: 100vh;
+}
+
+.game {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 325px;
+  height: 325px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.game-params {
+  width: 100vw;
+  position: absolute;
+  transform: translateX(-50%);
+  top: 120px;
+  left: 50%;
+  height: calc(100vh - 120px);
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ------------------ Texts ------------------*/
+
+.bestStrike {
+  color: var(--white);
+  font-size: 52px;
+  position: absolute;
+  bottom: 0rem;
+  left: 1rem;
+  user-select: none;
+}
+
+.countdown {
+  position: absolute;
+  color: var(--white);
+  font-size: 120px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  user-select: none;
+}

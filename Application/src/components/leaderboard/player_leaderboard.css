@@ -1,0 +1,39 @@
+/* ------------------ Responsive ------------------*/
+
+@media screen and (min-width: 1401px) {
+  .cell-leaderboard-stats {
+    font-size: 0.8vw;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .cell-leaderboard-stats {
+    font-size: 12px;
+  }
+}
+
+/* ------------------ Containers ------------------*/
+
+.container-player-leader {
+  display: grid;
+  grid-template-columns: 50px 180px 125px 70px 85px 120px 200px 60px;
+  grid-gap: 50px;
+  padding: 0.5rem 1rem;
+}
+
+.cell-leaderboard-stats {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.cell-leaderboard-user {
+  gap: 1rem;
+}
+
+/* ------------------ Images ------------------*/
+
+.cell-leaderboard img {
+  width: 20%;
+  object-fit: contain;
+  border-radius: 999px;
+}

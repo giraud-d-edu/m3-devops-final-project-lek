@@ -1,0 +1,186 @@
+/* ------------------ Containers ------------------*/
+
+.container-nav {
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  z-index: 999;
+  top: 0;
+  width: 260px;
+  background-color: var(--background-nav);
+  padding: 1.5rem 2rem;
+  box-sizing: border-box;
+  gap: 5vh;
+  overflow-y: auto;
+  border-right: 1px solid var(--white);
+  box-shadow: 4px 0px 32px 15px rgba(147, 226, 222, 0.1);
+}
+
+.container-nav::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.container-nav::-webkit-scrollbar-track {
+  background: transparent;
+  cursor: pointer;
+}
+
+.container-nav::-webkit-scrollbar-thumb {
+  background: var(--separation-nav);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.container-nav::-webkit-scrollbar-thumb:hover {
+  background: var(--grey);
+  cursor: pointer;
+}
+
+.container-nav .container-header-nav {
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.container-nav .container-links {
+  list-style: none;
+  padding: 0;
+  gap: .8rem;
+}
+
+.container-nav .container-global-links {
+  gap: 1rem;
+}
+
+.container-nav .container-links .container-link {
+  gap: 1rem;
+  color: var(--grey);
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  padding-bottom: .2rem;
+}
+
+.container-nav .container-links .container-link:hover {
+  border-color: var(--separation-nav);
+}
+
+.container-nav .container-new-friend {
+  gap: 1rem;
+}
+
+.container-nav .container-friends-requests {
+  gap: 1rem;
+}
+
+.container-nav .container-selection-friends {
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.container-selection-friends .container-selection {
+  gap: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.2rem;
+}
+
+.container-nav .container-friends {
+  gap: 1rem;
+  overflow-y: auto;
+}
+
+/* ------------------ Texts ------------------*/
+.container-nav .container-header-nav h5 {
+  font-size: 18px;
+  color: var(--white);
+}
+
+.container-nav .container-header-nav h5 span {
+  color: var(--cyan);
+}
+
+.subtitle-nav {
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.container-nav .container-links .container-link p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container-selection-friends .container-selection h5 {
+  color: var(--white);
+  font-weight: 400;
+}
+
+.error-message {
+  color: var(--white);
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ------------------ Images ------------------*/
+
+.container-nav .container-header-nav img {
+  width: 3rem;
+  object-fit: contain;
+}
+
+.container-nav .container-links .container-link img {
+  width: 1.8rem;
+  object-fit: contain;
+}
+
+.container-selection-friends .container-selection img {
+  object-fit: contain;
+  width: 1.5rem;
+}
+
+/* ------------------ Others ------------------*/
+
+.container-nav .separation-nav {
+  background-color: var(--separation-nav);
+  width: 100%;
+  height: 1px;
+  color: transparent;
+}
+
+.container-new-friend input {
+  background-color: transparent;
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--white);
+  max-width: calc(190px - 2rem);
+}
+
+.container-new-friend input:focus {
+  outline: 2px solid var(--blue);
+}
+
+.container-friends::-webkit-scrollbar {
+  width: 12px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.container-friends::-webkit-scrollbar-track {
+  background: transparent;
+  cursor: pointer;
+}
+
+.container-friends::-webkit-scrollbar-thumb {
+  background: var(--background-sign);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.container-friends::-webkit-scrollbar-thumb:hover {
+  background: var(--separation-nav);
+  cursor: pointer;
+}

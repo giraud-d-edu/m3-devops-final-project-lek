@@ -1,0 +1,38 @@
+/* ------------------ Containers ------------------*/
+
+.container-stat-profile {
+  background-color: var(--white);
+  padding: 1.5rem 1rem;
+  padding-top: 2.5rem;
+  border-radius: 10px;
+  width: 8rem;
+  height: 8rem;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ------------------ Texts ------------------*/
+
+.container-stat-profile h2 {
+  font-weight: 900;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 100%;
+  word-break: break-all;
+}
+
+.container-stat-profile p {
+  font-weight: 600;
+  font-size: 36px;
+}
+
+/* ------------------ Others ------------------*/
+
+.container-stat-profile img {
+  position: absolute;
+  top: -3rem;
+  width: 6rem;
+  object-fit: contain;
+}

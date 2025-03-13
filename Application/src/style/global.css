@@ -1,0 +1,60 @@
+/* ------------------ Containers ------------------*/
+
+body {
+  margin: 0;
+  background-image: url("/images/others/background.png");
+  background-color: var(--background-color);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 0;
+  font-family: "Poppins";
+  cursor: crosshair;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------------------ Texts ------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 2px solid var(--blue);
+}
+
+/* ------------------ Colors ------------------*/
+
+:root {
+  --background-color: #1a1a20;
+  --background-nav: #0e1117;
+  --background-game: rgba(0, 0, 0, 0.685);
+  --background-sign: #31313f;
+  --separation-nav : #373C49;
+  --background-inputs-form: #dddbe3;
+  --background-friend : #ffffff3d;
+  --grey: #a5a5a5;
+  --white: #f9f9f9;
+  --cyan: #48fdfd;
+  --blue: #48affd;
+  --error-code: rgb(225, 49, 49);
+}

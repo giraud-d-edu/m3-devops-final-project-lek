@@ -1,0 +1,147 @@
+/* ------------------ Containers ------------------*/
+
+.container-end-menu-shadow {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container-end-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  gap: 2rem;
+  box-sizing: border-box;
+}
+
+.container-score-stat {
+  background-color: #2d2f43;
+  padding: 0.2rem 2rem;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-stat {
+  gap: 3vw;
+  min-width: 300px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.container-end-menu .container-stats {
+  background-color: #2d2f43;
+  padding: 2rem 2rem;
+  border-radius: 10px;
+  gap: 2rem;
+}
+
+.container-target-stats {
+  gap: 3vh;
+}
+
+.container-col-stat {
+  color: var(--white);
+}
+
+.container-col-stats {
+  gap: 3rem;
+  justify-content: space-between;
+  margin-bottom: -1rem;
+}
+
+.container-end-menu .container-buttons {
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.container-stats-buttons {
+  gap: 3rem;
+  justify-content: space-between;
+}
+
+/* ------------------ Texts ------------------*/
+
+.container-score-stat h2 {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.container-score-stat p {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.container-stat h2 {
+  background-color: #5b5e7b;
+  color: var(--white);
+  width: 50%;
+  font-weight: 500;
+  height: 100%;
+  font-size: 18px;
+  align-items: center;
+  display: flex;
+  white-space: nowrap;
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 17px 8px rgba(0, 0, 0, 0.205);
+}
+
+.container-stat p {
+  height: 100%;
+  width: 25%;
+  background-color: #5b5e7b;
+  color: var(--white);
+  font-weight: 400;
+  font-size: 28px;
+  align-items: center;
+  display: flex;
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 17px 8px rgba(0, 0, 0, 0.205);
+}
+
+.container-col-stat h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.container-col-stat p {
+  font-size: 32px;
+  font-weight: 500;
+  margin-top: -0.5rem;
+}
+
+/* ------------------ Buttons ------------------*/
+
+.container-end-menu .container-buttons .buttons-menu-stats {
+  padding: 1rem 2rem;
+  background-color: #2d2f43;
+  border-radius: 10px;
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  font-size: 18px;
+  border: none;
+  font-family: "Poppins";
+}
+
+.container-end-menu .container-buttons .buttons-menu-stats:focus {
+  outline: 2px solid var(--blue);
+}
+
+.container-end-menu .container-buttons .buttons-menu-stats:hover {
+  outline: 2px solid var(--blue);
+  cursor: pointer;
+}
