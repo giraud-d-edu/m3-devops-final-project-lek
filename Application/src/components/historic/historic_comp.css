@@ -1,8 +1,0 @@
-/* ------------------ Containers ------------------*/
-
-.container-player-historic {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(130px, 1fr));
-  grid-gap: 50px;
-  padding: 0.5rem 1rem;
-}
