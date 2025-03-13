@@ -5,7 +5,7 @@
 - Kevin CHAFFAUX 
 - Lucas BIGOT 
 
- ## Description du projet : 
+## Description du projet : 
  Ce projet vise à mettre en place une application complète en respectant les principes DevOps. Pour ce faire nous allons dockeriser le projet dev de fin d'année de B2.
 
 ## Instructions de démarrage  
