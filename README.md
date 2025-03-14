@@ -46,5 +46,6 @@
 -   Intégration d'un tableau de bord Grafana avec Prometheus pour visualiser les métriques applicatives.
 -   Alerting automatisé en cas d'incident via Slack ou Discord.
 - Scan automatique des images Docker avec Trivy ou Snyk dans le pipeline CI.
+- Utilisation d'husky pour forcer la convention internationnale des commits
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/kycsoRcp)
