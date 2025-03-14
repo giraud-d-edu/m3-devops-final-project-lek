@@ -1,0 +1,22 @@
+groups:
+  - name: ServerDown
+    rules:
+      - alert: ServerDown
+        expr: up{job="server"} == 0
+        for: 30s 
+        labels:
+          severity: critical
+        annotations:
+          title: "Le serveur Node.js est down !"
+          description: "Le serveur Node.js ne répond plus depuis plus de 30 secondes."
+
+  - name: MongoDBDown
+    rules:
+      - alert: MongoDBDown
+        expr: up{job="mongo"} == 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          title: "MongoDB est down !"
+          description: "MongoDB ne répond plus depuis plus de 30 secondes."
