@@ -22,6 +22,7 @@
 3.  **Lancer le backend :**  ```go run main.go ```  
 
 #### **Terminal 2 (Bash recommandé):**  
+
 1.  **Se rendre dans le dossier de l'application frontend :**  ```cd Application/ ```  
 2.  **Installer les dépendances :**  ```npm i ```  
 3.  **Lancer l'application en mode développement :**  ```npm run dev ```
