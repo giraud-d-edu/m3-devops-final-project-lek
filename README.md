@@ -1,3 +1,4 @@
+
 # Projet Final : Application Web Dockerisée avec CI/CD et Déploiement Cloud  
 
 ## Noms des membres du trinôme  
@@ -5,37 +6,45 @@
 - Kevin CHAFFAUX 
 - Lucas BIGOT 
 
-## Description du projet : 
- Ce projet vise à mettre en place une application complète en respectant les principes DevOps. Pour ce faire nous allons dockeriser le projet dev de fin d'année de B2.
+## Description du projet 
+ Ce projet vise à mettre en place une application complète en respectant les principes DevOps.
 
-## Instructions de démarrage  
-### Prérequis  
-- [Git](https://git-scm.com/) 
-- [Docker & Docker Compose](https://www.docker.com/) 
--  *A mettre à jour*  
-
-### Démarrage en local  
-
-#### **Terminal 1 backend (WSL -  recommandé) :**  
-1.  **Se rendre dans le dossier de l'API :**  ```cd Api ```  
-2.  **Initialiser la base de données (si nécessaire) :**  ```go run main.go --init ```  
-3.  **Lancer le backend :**  ```go run main.go ```  
-
-#### **Terminal 2 (Bash recommandé):**  
-
-1.  **Se rendre dans le dossier de l'application frontend :**  ```cd Application/ ```  
-2.  **Installer les dépendances :**  ```npm i ```  
-3.  **Lancer l'application en mode développement :**  ```npm run dev ```
-4. **Ou build l'application:** ```npm run build```
-
-> En mode build, se rendre dans le dossier : "*release/1.0.0*" et démarrer l'exécutable.
-
-## 🔧 Technologies utilisées
+## Technologies utilisées 
  - **📌 Gestion de version & CI/CD :** Git, GitHub Actions 
  - **📌 Containerisation :** Docker, Docker Compose 
- - **📌 Backend :** Golang
- - **📌 Frontend :** Electron avec un template Vite + React.ts
+ - **📌 Backend :** Node.js avec Express
+ - **📌 Frontend :** React.js
  - **📌 Base de données :** mongoDB
 
+## Instructions de démarrage 
+
+### Local:
+    docker-compose up --build -d
+    
+### Adresses en local:
+- **Prometheus**: http://localhost:9090/
+- **Grafana**: http://localhost:3001/ (*login: admin, mdp: admin*)
+- **Alertmanager**: http://localhost:9093/
+- **Application**: http://localhost:7777/
+
+### Adresse en production:
+- [https://m3-devops-final-project-lek-production.up.railway.app/](https://m3-devops-final-project-lek-production.up.railway.app/ "https://m3-devops-final-project-lek-production.up.railway.app/")
+
+## Livrables réalisés
+### Must Have:
+-   Création de Dockerfiles pour le frontend, le backend et la base de données.
+-   Orchestration des services via Docker Compose.
+- Utilisation de variables d'environnement (.env) pour les configurations sensibles.
+-  Utilisation de branches Git et pull requests pour la gestion des modifications.
+-   Répartition équitable des tâches entre les membres du trinôme.
+### Should Have:
+- Déclenchement automatique des builds et des déploiements sur chaque push vers la branche principale.
+- Respect des conventions de commit pour faciliter l'automatisation et la lisibilité de l'historique Git.
+- Optimisation de la taille des images Docker via des builds multi-étapes.
+- Déploiement vers un environnement de production (PaaS gratuit).
+### Nice to Have:
+-   Intégration d'un tableau de bord Grafana avec Prometheus pour visualiser les métriques applicatives.
+-   Alerting automatisé en cas d'incident via Slack ou Discord.
+- Scan automatique des images Docker avec Trivy ou Snyk dans le pipeline CI.
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/kycsoRcp)
