@@ -14,26 +14,29 @@
 - [Docker & Docker Compose](https://www.docker.com/) 
 -  *A mettre à jour*  
 
-### Démarrage en local  
+## Trivy
+Le trivy-scan.yml est créé mais le projet étant ancien il y a beaucoup de faille (cf ci dessous pour Node.js). Le scan trivy n'est donc pas déployé.
 
-#### **Terminal 1 backend (WSL -  recommandé) :**  
-1.  **Se rendre dans le dossier de l'API :**  ```cd Api ```  
-2.  **Initialiser la base de données (si nécessaire) :**  ```go run main.go --init ```  
-3.  **Lancer le backend :**  ```go run main.go ```  
+Node.js (node-pkg)
+==================
+Total: 33 (HIGH: 32, CRITICAL: 1)
 
-#### **Terminal 2 (Bash recommandé):**  
-1.  **Se rendre dans le dossier de l'application frontend :**  ```cd Application/ ```  
-2.  **Installer les dépendances :**  ```npm i ```  
-3.  **Lancer l'application en mode développement :**  ```npm run dev ```
-4. **Ou build l'application:** ```npm run build```
+┌───────────────────────────────────────┬────────────────┬──────────┬──────────┬───────────────────┬────────────────────────────┬──────────────────────────────────────────────────────────────┐
+│                Library                │ Vulnerability  │ Severity │  Status  │ Installed Version │       Fixed Version        │                         
+   Title                             │
+├───────────────────────────────────────┼────────────────┼──────────┼──────────┼───────────────────┼────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ ansi-regex (package.json)             │ CVE-2021-3807  │ HIGH     │ fixed    │ 3.0.0             │ 6.0.1, 5.0.1, 4.1.1, 3.0.1 │ nodejs-ansi-regex: Regular expression denial of service      │
+│                                       │                │          │          │                   │                            │ (ReDoS) matching ANSI escape codes                           │
+│                                       │                │          │          │                   │                            │ https://avd.aquasec.com/nvd/cve-2021-3807                    │
+│                                       │                │          │          ├───────────────────┤                            │                         
+...
 
-> En mode build, se rendre dans le dossier : "*release/1.0.0*" et démarrer l'exécutable.
 
 ## 🔧 Technologies utilisées
  - **📌 Gestion de version & CI/CD :** Git, GitHub Actions 
  - **📌 Containerisation :** Docker, Docker Compose 
- - **📌 Backend :** Golang
- - **📌 Frontend :** Electron avec un template Vite + React.ts
+ - **📌 Backend :** express node.js
+ - **📌 Frontend :** react js
  - **📌 Base de données :** mongoDB
 
 

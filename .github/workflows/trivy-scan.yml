@@ -1,0 +1,41 @@
+name: Trivy Security Scan
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Trivy
+        run: |
+          sudo apt-get install -y wget
+          wget https://github.com/aquasecurity/trivy/releases/latest/download/trivy_linux_amd64.tar.gz
+          tar -xzf trivy_linux_amd64.tar.gz
+          sudo mv trivy /usr/local/bin/
+
+      - name: Build Docker front image 
+        run: docker build -t m3-devops-final-project-lek-client:latest
+
+      - name: Scan Docker front image with Trivy
+        run: trivy image --exit-code 1 --severity HIGH,CRITICAL m3-devops-final-project-lek-client:latest
+
+      - name: Build Docker back image 
+        run: docker build -t m3-devops-final-project-lek-server:latest
+
+      - name: Scan Docker back image with Trivy
+        run: trivy image --exit-code 1 --severity HIGH,CRITICAL m3-devops-final-project-lek-server:latest
+
+      - name: Build Docker mongo db image 
+        run: docker build -t mongo:4.2
+
+      - name: Scan Docker mongo db image with Trivy
+        run: trivy image --exit-code 1 --severity HIGH,CRITICAL mongo:4.2
