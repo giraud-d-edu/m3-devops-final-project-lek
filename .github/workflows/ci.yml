@@ -24,5 +24,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Fix package.json for ESM
+        run: |
+          jq '. + { "type": "module" }' package.json > package.json.tmp && mv package.json.tmp package.json
+
       - name: Run tests
         run: npm test
