@@ -1,0 +1,81 @@
+services:
+  server:
+    build:
+      context: .
+      dockerfile: src/server/Dockerfile.server
+    ports:
+      - "7777:7777"
+    env_file:
+      - .env
+    depends_on:
+      - mongo
+    networks:
+      - monitoring
+
+  mongo:
+    image: mongo:4.2
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - monitoring
+
+  mongodb-exporter:
+    image: percona/mongodb_exporter:0.39.0
+    container_name: mongodb-exporter
+    command:
+      - "--mongodb.uri=mongodb://mongo:27017"
+    ports:
+      - "9216:9216"
+    depends_on:
+      - mongo
+    networks:
+      - monitoring
+
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./alert_rules.yml:/etc/prometheus/alert_rules.yml
+    ports:
+      - "9090:9090"
+    depends_on:
+      - server
+      - mongo
+    networks:
+      - monitoring
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3001:3000"
+    depends_on:
+      - prometheus
+    networks:
+      - monitoring
+
+  node-exporter:
+    image: prom/node-exporter
+    ports:
+      - "9100:9100"
+    networks:
+      - monitoring
+
+  alertmanager:
+    image: prom/alertmanager:latest
+    volumes:
+      - ./alertmanager.yml:/etc/alertmanager/alertmanager.yml
+    ports:
+      - "9093:9093"
+    depends_on:
+      - prometheus
+    networks:
+      - monitoring
+
+volumes:
+  mongo-data:
+
+networks:
+  monitoring:
+    driver: bridge
