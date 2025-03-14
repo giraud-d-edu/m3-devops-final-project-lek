@@ -41,7 +41,7 @@
 - Déclenchement automatique des builds et des déploiements sur chaque push vers la branche principale.
 - Respect des conventions de commit pour faciliter l'automatisation et la lisibilité de l'historique Git.
 - Optimisation de la taille des images Docker via des builds multi-étapes.
-- Déploiement vers un environnement de production (PaaS gratuit).
+- Déploiement vers un environnement de production (sur Railway) via github Actions. Sur le fork : (https://github.com/evanferron/m3-devops-final-project-lek)
 ### Nice to Have:
 -   Intégration d'un tableau de bord Grafana avec Prometheus pour visualiser les métriques applicatives.
 -   Alerting automatisé en cas d'incident via Slack ou Discord.
