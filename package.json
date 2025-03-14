@@ -12,7 +12,8 @@
     "start-dev": "concurrently \"npm run server-dev\" \"npm run dev\"",
     "server-spec": "babel-node src/server/server.spec",
     "start": "npm run server",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "mocha"
   },
   "keywords": [
     "react",
@@ -55,15 +56,21 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.2",
+    "chai": "^5.2.0",
     "concurrently": "^4.0.1",
     "cross-env": "^5.2.0",
     "highground": "^1.0.3-beta",
     "husky": "^9.1.7",
     "jest": "^23.6.0",
+    "mocha": "^11.1.0",
     "mongodb": "^3.1.10",
     "nodemon": "^1.18.4",
     "style-loader": "^0.23.0",
+    "tsx": "^4.19.3",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.7"
+  },
+  "mocha": {
+    "import": "tsx"
   }
 }
